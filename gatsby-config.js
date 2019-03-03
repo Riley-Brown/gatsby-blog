@@ -29,7 +29,14 @@ module.exports = {
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
-    // 'gatsby-plugin-offline',
+    "gatsby-plugin-offline",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src/posts`,
+        name: "posts",
+      },
+    },
     {
       resolve: "gatsby-source-wordpress",
       options: {
@@ -38,6 +45,15 @@ module.exports = {
         hostingWPCOM: false,
         useACF: true,
         verboseOutput: true,
+        includedRoutes: [
+          "**/posts",
+          "**/pages",
+          "**/media",
+          "**/categories",
+          "**/tags",
+          "**/taxonomies",
+          "**/users",
+        ],
       },
     },
   ],
