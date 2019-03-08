@@ -4,7 +4,7 @@ import { StaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
-
+import Archive from "./archive"
 const Layout = ({ children }) => (
   <StaticQuery
     query={graphql`
@@ -34,6 +34,7 @@ const Layout = ({ children }) => (
             <a href="https://www.gatsbyjs.org">Gatsby</a>
           </footer>
         </div>
+        <Archive />
       </>
     )}
   />
