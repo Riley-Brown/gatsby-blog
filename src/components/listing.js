@@ -31,9 +31,13 @@ const Listing = () => (
         allMarkdownRemark.edges.map(edge => (
           <article key={edge.node.frontmatter.slug}>
             {edge.node.frontmatter.img ? (
-              <img src={edge.node.frontmatter.img} alt="" />
+              <Link to={edge.node.frontmatter.slug}>
+                <img src={edge.node.frontmatter.img} alt="" />
+              </Link>
             ) : null}
-            <h2>{edge.node.frontmatter.title}</h2>
+            <Link to={edge.node.frontmatter.slug}>
+              <h2>{edge.node.frontmatter.title}</h2>
+            </Link>
             <h6>{edge.node.frontmatter.date}</h6>
             <p>{edge.node.excerpt}</p>
             <Link to={edge.node.frontmatter.slug}>Read More</Link>
