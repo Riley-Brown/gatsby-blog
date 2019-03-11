@@ -2,6 +2,7 @@ import React from "react"
 import { Link, StaticQuery, qraphql } from "gatsby"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import "./listing.css"
 
 const LISTING_QUERY = graphql`
   query BlogPostListing {
@@ -13,6 +14,7 @@ const LISTING_QUERY = graphql`
             date(formatString: "MMMM D, YYYY")
             title
             slug
+            img
           }
         }
       }
@@ -21,13 +23,16 @@ const LISTING_QUERY = graphql`
 `
 
 const Listing = () => (
-  <div>
+  <div className="posts">
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <StaticQuery
       query={LISTING_QUERY}
       render={({ allMarkdownRemark }) =>
         allMarkdownRemark.edges.map(edge => (
           <article key={edge.node.frontmatter.slug}>
+            {edge.node.frontmatter.img ? (
+              <img src={edge.node.frontmatter.img} alt="" />
+            ) : null}
             <h2>{edge.node.frontmatter.title}</h2>
             <h6>{edge.node.frontmatter.date}</h6>
             <p>{edge.node.excerpt}</p>
