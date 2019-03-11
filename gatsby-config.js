@@ -72,7 +72,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-remark-prismjs`,
+      resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
           {
