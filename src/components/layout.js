@@ -6,7 +6,6 @@ import Header from "./header"
 import "./layout.css"
 import Archive from "./archive"
 import Navbar from "./Navbar"
-require("prismjs/themes/prism-solarizedlight.css")
 
 const Layout = ({ children, location }) => (
   <StaticQuery
