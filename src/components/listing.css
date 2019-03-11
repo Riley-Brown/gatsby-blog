@@ -1,0 +1,29 @@
+.posts {
+  display: flex;
+}
+
+.posts h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+img {
+  margin: 0;
+}
+
+.posts img {
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.posts h2 {
+  margin-bottom: 5px;
+}
+.posts h6 {
+  margin-bottom: 10px;
+  font-weight: 400;
+  color: gray;
+  opacity: 0.8;
+}
