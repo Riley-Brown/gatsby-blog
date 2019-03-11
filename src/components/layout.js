@@ -5,6 +5,7 @@ import Img from "gatsby-image"
 import Header from "./header"
 import "./layout.css"
 import Archive from "./archive"
+import Navbar from "./Navbar"
 const Layout = ({ children, location }) => (
   <StaticQuery
     query={graphql`
@@ -25,7 +26,8 @@ const Layout = ({ children, location }) => (
     `}
     render={data => (
       <>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
+        <Navbar />
         <div
           style={{
             margin: `0 auto`,
@@ -35,13 +37,7 @@ const Layout = ({ children, location }) => (
           }}
         >
           <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
         </div>
-        <Archive />
       </>
     )}
   />
