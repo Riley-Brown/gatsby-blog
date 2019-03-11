@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import Layout from "./layout"
 import { graphql } from "gatsby"
 import "./postLayout.css"
+import Img from "gatsby-image"
 
 export default class PostLayout extends Component {
   render() {
@@ -9,6 +10,7 @@ export default class PostLayout extends Component {
     const { location } = this.props
     return (
       <Layout location={location}>
+        <img src={markdownRemark.frontmatter.img} alt="" />
         <h1>{markdownRemark.frontmatter.title}</h1>
         <div
           className="post"
