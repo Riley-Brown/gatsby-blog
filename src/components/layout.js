@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
-
+import Img from "gatsby-image"
 import Header from "./header"
 import "./layout.css"
 import Archive from "./archive"
@@ -14,11 +14,19 @@ const Layout = ({ children }) => (
             title
           }
         }
+        file(relativePath: { regex: "/png/" }) {
+          childImageSharp {
+            fluid(maxWidth: 1000) {
+              ...GatsbyImageSharpFluid_tracedSVG
+            }
+          }
+        }
       }
     `}
     render={data => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
+        <Img fluid={data.file.childImageSharp.fluid} />
         <div
           style={{
             margin: `0 auto`,
