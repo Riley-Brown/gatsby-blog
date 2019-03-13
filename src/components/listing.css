@@ -1,5 +1,15 @@
 .posts {
   display: flex;
+  flex-wrap: wrap;
+}
+.post {
+  flex: 33%;
+  max-width: 33.333%;
+}
+.posts {
+  /* display: flex; */
+  /* flex-wrap: wrap;
+  width: 33%; */
 }
 
 .posts h1,

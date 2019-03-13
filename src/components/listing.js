@@ -29,7 +29,7 @@ const Listing = () => (
       query={LISTING_QUERY}
       render={({ allMarkdownRemark }) =>
         allMarkdownRemark.edges.map(edge => (
-          <article key={edge.node.frontmatter.slug}>
+          <article className="post" key={edge.node.frontmatter.slug}>
             {edge.node.frontmatter.img ? (
               <Link to={edge.node.frontmatter.slug}>
                 <img src={edge.node.frontmatter.img} alt="" />
