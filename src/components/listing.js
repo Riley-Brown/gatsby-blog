@@ -40,7 +40,9 @@ const Listing = () => (
             </Link>
             <h6>{edge.node.frontmatter.date}</h6>
             <p>{edge.node.excerpt}</p>
-            <Link to={edge.node.frontmatter.slug}>Read More</Link>
+            <Link to={edge.node.frontmatter.slug} className="read-more">
+              Read More »
+            </Link>
           </article>
         ))
       }
