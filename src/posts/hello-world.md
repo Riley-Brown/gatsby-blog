@@ -1,8 +1,9 @@
 ---
 slug: "/hello-world"
-date: "2018-08-07"
+date: "2018-08-04"
 title: "My First Post"
 img: "https://blog.riley.gg/wp-content/uploads/elementor/thumbs/pexels-photo-o1ojckl0efl8iv51r91z9jtm39v5wjq20adie62s20.jpg"
+author: "Riley Brown"
 ---
 
 Decided to make a blog to practice making custom WordPress layouts. I’m not sure how much I will actually use this, but I do feel like it benefited my WordPress skills a little bit. I may post about my journey in learning web development, and random code snippets, or random thoughts about web development.
