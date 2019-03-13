@@ -16,10 +16,11 @@ img {
 .posts img {
   margin-bottom: 10px;
   border-radius: 10px;
+  min-height: 224px;
 }
 
 .posts h2 {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 .posts h6 {
   margin-bottom: 10px;
@@ -30,4 +31,14 @@ img {
 
 .posts p {
   margin-bottom: 5px;
+  color: #333;
+  opacity: 0.8;
+}
+.posts a {
+  text-decoration: none;
+  color: #333;
+}
+
+.posts .read-more {
+  color: #34b3a0;
 }
