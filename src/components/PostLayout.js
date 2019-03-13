@@ -10,12 +10,15 @@ export default class PostLayout extends Component {
     const { location } = this.props
     return (
       <Layout location={location}>
-        <img src={markdownRemark.frontmatter.img} alt="" />
-        <h1>{markdownRemark.frontmatter.title}</h1>
-        <div
-          className="post"
-          dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
-        />
+        <div className="single-post">
+          <h1>{markdownRemark.frontmatter.title}</h1>
+          <div className="post-info">
+            <span>{markdownRemark.frontmatter.author}</span>
+            <span>{markdownRemark.frontmatter.date}</span>
+          </div>
+          <img src={markdownRemark.frontmatter.img} alt="" />
+          <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
+        </div>
       </Layout>
     )
   }
@@ -27,9 +30,10 @@ export const query = graphql`
       html
       frontmatter {
         title
-        date
+        date(formatString: "MMMM D, YYYY")
         slug
         img
+        author
       }
     }
   }
