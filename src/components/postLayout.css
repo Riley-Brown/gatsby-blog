@@ -1,3 +1,26 @@
-.post p {
+.single-post p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.single-post h1 {
+  font-size: 3em;
+}
+.post-info {
+  border-top: 1px dashed lightgray;
+  border-bottom: 1px dashed lightgray;
   margin-bottom: 20px;
+  padding: 10px 0;
+}
+.single-post img {
+  border-radius: 3px;
+}
+
+.single-post .post-info span:nth-of-type(2) {
+  margin-left: 10px;
+}
+.single-post .post-info {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  opacity: 0.7;
+  font-size: 0.9rem;
 }
