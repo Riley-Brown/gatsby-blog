@@ -63,14 +63,14 @@ module.exports = {
         ],
       },
     },
-    "gatsby-transformer-remark",
-    "gatsby-remark-copy-linked-files",
-    {
-      resolve: `gatsby-remark-images`,
-      options: {
-        maxWidth: 1080,
-      },
-    },
+    // "gatsby-transformer-remark",
+    // "gatsby-remark-copy-linked-files",
+    // {
+    //   resolve: `gatsby-remark-images`,
+    //   options: {
+    //     maxWidth: 1080,
+    //   },
+    // },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -80,6 +80,19 @@ module.exports = {
             options: {
               classPrefix: "language-",
               showLineNumbers: true,
+            },
+          },
+        ],
+      },
+    },
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-copy-linked-files",
+            options: {
+              ignoreFileExtensions: [],
             },
           },
         ],
