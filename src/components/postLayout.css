@@ -1,6 +1,11 @@
 .single-post p {
   margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+.single-post {
+  max-width: 960px;
+  width: 90%;
+  margin: auto;
 }
 
 .single-post h1 {
