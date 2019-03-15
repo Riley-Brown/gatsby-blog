@@ -6,6 +6,9 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    "gatsby-plugin-offline",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -13,8 +16,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -24,12 +25,10 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.,
+        icon: `src/images/gatsby-icon.png`,
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.app/offline
-    "gatsby-plugin-offline",
+
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -45,47 +44,6 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-wordpress",
-      options: {
-        baseUrl: "localhost",
-        protocol: "http",
-        hostingWPCOM: false,
-        useACF: true,
-        verboseOutput: true,
-        includedRoutes: [
-          "**/posts",
-          "**/pages",
-          "**/media",
-          "**/categories",
-          "**/tags",
-          "**/taxonomies",
-          "**/users",
-        ],
-      },
-    },
-    // "gatsby-transformer-remark",
-    // "gatsby-remark-copy-linked-files",
-    // {
-    //   resolve: `gatsby-remark-images`,
-    //   options: {
-    //     maxWidth: 1080,
-    //   },
-    // },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-prismjs`,
-            options: {
-              classPrefix: "language-",
-              showLineNumbers: true,
-            },
-          },
-        ],
-      },
-    },
-    {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
@@ -93,6 +51,13 @@ module.exports = {
             resolve: "gatsby-remark-copy-linked-files",
             options: {
               ignoreFileExtensions: [],
+            },
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              showLineNumbers: true,
             },
           },
         ],
