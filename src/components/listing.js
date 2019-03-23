@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, StaticQuery, qraphql } from "gatsby"
-import Image from "../components/image"
+// import Image from "../components/image"
 import SEO from "../components/seo"
 import "./listing.css"
 
@@ -14,7 +14,7 @@ const LISTING_QUERY = graphql`
             date(formatString: "MMMM D, YYYY")
             title
             slug
-            img
+            cover_img
           }
         }
       }
@@ -30,11 +30,14 @@ const Listing = () => (
       render={({ allMarkdownRemark }) =>
         allMarkdownRemark.edges.map(edge => (
           <article className="post" key={edge.node.frontmatter.slug}>
-            {edge.node.frontmatter.img ? (
+            {/* {edge.node.frontmatter.img ? (
               <Link to={edge.node.frontmatter.slug}>
-                <img src={edge.node.frontmatter.img} alt="" />
+                <img src={edge.node.frontmatter.cover_img} alt="" />
               </Link>
-            ) : null}
+            ) : null} */}
+            <Link to={edge.node.frontmatter.slug}>
+              <img src={edge.node.frontmatter.cover_img} alt="" />
+            </Link>
             <Link to={edge.node.frontmatter.slug}>
               <h2>{edge.node.frontmatter.title}</h2>
             </Link>
