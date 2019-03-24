@@ -46,7 +46,7 @@ export const query = graphql`
     file(relativePath: { eq: $cover_img }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
