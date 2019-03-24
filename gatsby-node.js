@@ -16,6 +16,7 @@ exports.createPages = ({ graphql, actions }) => {
               frontmatter {
                 title
                 slug
+                cover_img
               }
             }
           }
@@ -28,6 +29,7 @@ exports.createPages = ({ graphql, actions }) => {
           component: path.resolve("./src/components/postLayout.js"),
           context: {
             slug: node.frontmatter.slug,
+            cover_img: node.frontmatter.cover_img,
           },
         })
       })
