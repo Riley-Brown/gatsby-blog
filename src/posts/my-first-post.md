@@ -3,7 +3,7 @@ slug: "/hello-world"
 date: "2018-08-04"
 title: "My First Post"
 cover_img: "first-post.jpg"
-thumbnail: "/static/fadbb6736ee27fc98ea53bb9b09e77f0/8e1d9/first-post.jpg"
+thumbnail_img: "/static/fadbb6736ee27fc98ea53bb9b09e77f0/8e1d9/first-post.jpg"
 author: "Riley Brown"
 ---
 
