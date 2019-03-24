@@ -1,20 +1,18 @@
 .posts {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 90%;
   margin: auto;
   max-width: 1140px;
 }
 .post {
-  flex: 33%;
-  max-width: 32%;
-  margin-bottom: 20px;
-}
-.posts {
-  /* display: flex; */
-  /* flex-wrap: wrap;
-  width: 33%; */
+  /* flex: 33%; */
+  /* max-width: 350px; */
+  /* flex-grow: 1; */
+  width: 31%;
+  margin-bottom: 40px;
+  /* max-height: 500px; */
 }
 
 .posts h1,
@@ -57,4 +55,18 @@ img {
 
 .posts .read-more {
   color: #34b3a0;
+}
+
+@media (max-width: 992px) {
+  .post {
+    width: 45%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 680px) {
+  .post {
+    width: 90%;
+    margin-bottom: 30px;
+  }
 }
