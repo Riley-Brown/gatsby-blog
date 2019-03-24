@@ -15,15 +15,10 @@ export default class PostLayout extends Component {
         <div className="single-post">
           <h1>{markdownRemark.frontmatter.title}</h1>
           <div className="post-info">
-            <span>{markdownRemark.frontmatter.author}</span>
+            <span>By {markdownRemark.frontmatter.author}</span>
             <span>{markdownRemark.frontmatter.date}</span>
           </div>
-          {/* <img
-            src={markdownRemark.frontmatter.cover_img}
-            alt="featured image"
-          /> */}
           <Img fluid={this.props.data.file.childImageSharp.fluid} />
-
           <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
         </div>
       </Layout>
@@ -45,7 +40,7 @@ export const query = graphql`
     }
     file(relativePath: { eq: $cover_img }) {
       childImageSharp {
-        fluid(maxWidth: 1000) {
+        fluid(maxWidth: 1200) {
           ...GatsbyImageSharpFluid_tracedSVG
         }
       }
