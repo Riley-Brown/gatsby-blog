@@ -1,11 +1,16 @@
 .single-post p {
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 20px;
+  font-size: 20px;
 }
+
 .single-post {
   max-width: 960px;
   width: 90%;
   margin: auto;
+  line-height: 1.7;
+  font-family: sans-serif;
+  padding-bottom: 50px;
 }
 
 .single-post h1 {
@@ -18,7 +23,8 @@
   padding: 10px 0;
 }
 .single-post img {
-  border-radius: 3px;
+  border-radius: 5px;
+  /* margin: 200px 0; */
 }
 
 .single-post .post-info span:nth-of-type(2) {
@@ -28,4 +34,17 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   opacity: 0.7;
   font-size: 0.9rem;
+}
+.single-post a {
+  text-decoration: none;
+  color: rgb(52, 179, 160);
+}
+
+@media (max-width: 768px) {
+  .single-post p {
+    font-size: 16px;
+  }
+  .single-post h1 {
+    font-size: 2.2em;
+  }
 }
