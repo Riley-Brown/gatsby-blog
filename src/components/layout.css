@@ -647,3 +647,8 @@ pre tt:after {
   padding-left: 2.8em;
   overflow: initial;
 }
+
+code.language-text {
+  margin: 0 5px;
+  padding: 2px 5px !important;
+}
