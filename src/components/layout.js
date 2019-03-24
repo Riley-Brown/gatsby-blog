@@ -2,9 +2,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import Header from "./header"
+// import Header from "./header"
 import "./layout.css"
-import Archive from "./archive"
+// import Archive from "./archive"
 import Navbar from "./Navbar"
 
 const Layout = ({ children, location }) => (
@@ -16,19 +16,20 @@ const Layout = ({ children, location }) => (
             title
           }
         }
-        file(relativePath: { regex: "/png/" }) {
-          childImageSharp {
-            fluid(maxWidth: 1000) {
-              ...GatsbyImageSharpFluid_tracedSVG
-            }
-          }
-        }
+        # file(relativePath: { regex: "/fullscreen/" }) {
+        #   childImageSharp {
+        #     fluid(maxWidth: 1000) {
+        #       ...GatsbyImageSharpFluid
+        #     }
+        #   }
+        # }
       }
     `}
     render={data => (
       <>
         {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
         <Navbar />
+        {/* <Img fluid={data.file.childImageSharp.fluid} /> */}
         <div
           style={{
             margin: `0 auto`,
