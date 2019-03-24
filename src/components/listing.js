@@ -32,12 +32,6 @@ const Listing = () => (
       render={({ allMarkdownRemark }) =>
         allMarkdownRemark.edges.map(edge => (
           <article className="post" key={edge.node.frontmatter.slug}>
-            {/* {edge.node.frontmatter.img ? (
-              <Link to={edge.node.frontmatter.slug}>
-                <img src={edge.node.frontmatter.cover_img} alt="" />
-              </Link>
-            ) : null} */}
-            {/* <Img fluid={imageOne.childImageSharp.fluid} /> */}
             <Link to={edge.node.frontmatter.slug}>
               <img
                 src={edge.node.frontmatter.thumbnail_img}
