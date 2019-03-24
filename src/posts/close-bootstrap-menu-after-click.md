@@ -1,8 +1,9 @@
 ---
 slug: "/close-bootstrap-menu-after-click"
-date: "2018-08-07"
-title: "My First Post"
-img: "https://blog.riley.gg/wp-content/uploads/elementor/thumbs/pexels-photo-o1ojckl0efl8iv51r91z9jtm39v5wjq20adie62s20.jpg"
+date: "2018-08-05"
+title: "Close BootStrap nav menu after click"
+cover_img: "bootstrap-social.png"
+thumbnail: "/static/56be615bbca4502de5d55d721dae917f/c07a1/bootstrap-social.png"
 author: "Riley Brown"
 ---
 

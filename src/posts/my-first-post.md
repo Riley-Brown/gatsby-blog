@@ -2,7 +2,8 @@
 slug: "/hello-world"
 date: "2018-08-04"
 title: "My First Post"
-img: "https://blog.riley.gg/wp-content/uploads/elementor/thumbs/pexels-photo-o1ojckl0efl8iv51r91z9jtm39v5wjq20adie62s20.jpg"
+cover_img: "first-post.jpg"
+thumbnail: "/static/fadbb6736ee27fc98ea53bb9b09e77f0/8e1d9/first-post.jpg"
 author: "Riley Brown"
 ---
 
@@ -10,6 +11,10 @@ Decided to make a blog to practice making custom WordPress layouts. I’m not su
 
 This layout is using a simple BootStrap template that can be found from <a href="https://www.youtube.com/watch?v=2Zt8va_6HRk&list=PLillGF-RfqbaKe3TWtwDW8vYV2MHIFPEi" target="_blank">Brad Traversy’s WordPress YouTube course </a> which I highly recommend if you want to learn about WordPress or any programming in general, Brad is a great teacher.
 
+![](fullscreen-landing.jpg)
+
 ```js
 var i = 0
 ```
+
+sup
