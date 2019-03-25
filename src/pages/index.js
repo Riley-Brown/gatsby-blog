@@ -6,7 +6,20 @@ import Listing from "../components/listing"
 
 const IndexPage = ({ location }) => (
   <Layout location={location}>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO
+      title="My Blog"
+      description="Web Development blog built with the Gatsby static site generator."
+      keywords={[
+        `gatsby`,
+        `application`,
+        `react`,
+        `riley brown`,
+        `web development`,
+        `riley brown web developer`,
+        `gatsby blog`,
+      ]}
+      image="./images/gatsby-blog-seo.png"
+    />
     <Listing />
   </Layout>
 )

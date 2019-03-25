@@ -4,6 +4,7 @@ import { Link, StaticQuery, qraphql } from "gatsby"
 import SEO from "../components/seo"
 import "./listing.css"
 import Img from "gatsby-image"
+import { Helmet } from "react-helmet"
 
 const LISTING_QUERY = graphql`
   query BlogPostListing {
@@ -26,7 +27,17 @@ const LISTING_QUERY = graphql`
 
 const Listing = () => (
   <div className="posts">
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO
+      title="Home"
+      keywords={[
+        `gatsby`,
+        `application`,
+        `react`,
+        `web development`,
+        `riley.gg`,
+        `riley brown web developer`,
+      ]}
+    />
     <StaticQuery
       query={LISTING_QUERY}
       render={({ allMarkdownRemark }) =>
