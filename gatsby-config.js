@@ -1,8 +1,11 @@
 module.exports = {
+  pathPrefix: `/img`,
   siteMetadata: {
-    title: `Gatsby WordPress`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Riley.gg Web Dev Blog`,
+    description: `A Web Development blog made with the Gatsby static site generator.`,
+    author: `Riley Brown`,
+    url: `https://www.blog.riley.gg`,
+    image: `https://i.imgur.com/5uEfXe7.png`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
