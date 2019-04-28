@@ -182,4 +182,5 @@ An important argument to pass in to this listener is the `e` arg, short for even
 Next I set the modal display to `block` using simple DOM manipulation and then use the modalElement function to target elements inside of the modal and set them to values of the `img` data attributes.
 
 Thats it. All the JS we need for a dynamic modal. All of this code can be found on <a href="https://github.com/Riley-Brown/vanilla-js-modal" target="_blank">my GitHub here</a> as well as a <a href="https://codepen.io/RileyB/pen/XQyaXy" target="_blank">live codepen demo </a>
-![Image modal](readme.gif)
+
+<!-- ![Image modal](readme.gif) -->
