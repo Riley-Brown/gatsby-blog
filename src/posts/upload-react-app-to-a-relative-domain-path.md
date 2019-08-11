@@ -3,7 +3,7 @@ slug: "/upload-react-app-to-a-relative-domain-path"
 date: "2018-10-14"
 title: "Upload React App to a relative domain path"
 cover_img: "react-app-relative-domain.png"
-thumbnail_img: "/static/a00b3121f30ff65e70c720174c67377c/cd6b9/react-app-relative-domain.png"
+thumbnail_img: "/static/a00b3121f30ff65e70c720174c67377c/0cd8f/react-app-relative-domain.png"
 author: "Riley Brown"
 ---
 

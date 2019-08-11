@@ -3,7 +3,7 @@ slug: "/simple-fullscreen-spinner"
 date: "2018-09-03"
 title: "Simple Fullscreen Spinner"
 cover_img: "fullscreen-spinner.png"
-thumbnail_img: "static/04036adedfc30aa74ca826012e4f8f4e/c07a1/fullscreen-spinner.png"
+thumbnail_img: "/static/04036adedfc30aa74ca826012e4f8f4e/0ebde/fullscreen-spinner.png"
 author: "Riley Brown"
 ---
 

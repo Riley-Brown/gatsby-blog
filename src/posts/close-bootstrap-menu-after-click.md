@@ -3,7 +3,7 @@ slug: "/close-bootstrap-menu-after-click"
 date: "2018-08-05"
 title: "Close BootStrap nav menu after click"
 cover_img: "bootstrap-social.png"
-thumbnail_img: "/static/56be615bbca4502de5d55d721dae917f/c07a1/bootstrap-social.png"
+thumbnail_img: "/static/56be615bbca4502de5d55d721dae917f/0ebde/bootstrap-social.png"
 author: "Riley Brown"
 ---
 
