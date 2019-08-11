@@ -1,5 +1,5 @@
 ---
-slug: "/hello-world"
+slug: "/my-first-post"
 date: "2018-08-03"
 title: "My First Post"
 cover_img: "first-post.jpg"
