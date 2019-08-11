@@ -17,18 +17,20 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       }
-    `).then(results => {
-      results.data.allMarkdownRemark.edges.forEach(({ node }) => {
-        createPage({
-          path: node.frontmatter.slug,
-          component: path.resolve("./src/components/postLayout.js"),
-          context: {
-            slug: node.frontmatter.slug,
-            cover_img: node.frontmatter.cover_img,
-          },
+    `)
+      .then(results => {
+        results.data.allMarkdownRemark.edges.forEach(({ node }) => {
+          createPage({
+            path: node.frontmatter.slug,
+            component: path.resolve("./src/components/postLayout.js"),
+            context: {
+              slug: node.frontmatter.slug,
+              cover_img: node.frontmatter.cover_img,
+            },
+          })
         })
+        resolve()
       })
-      resolve()
-    })
+      .catch(err => console.log(err))
   })
 }
