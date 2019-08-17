@@ -1,10 +1,8 @@
 import React from "react"
-import { Link, StaticQuery, qraphql } from "gatsby"
-// import Image from "../components/image"
-import SEO from "../components/seo"
+import { Link, StaticQuery, graphql } from "gatsby"
 import "./listing.css"
 import Img from "gatsby-image"
-import { Helmet } from "react-helmet"
+import SEO from "../components/seo"
 
 const LISTING_QUERY = graphql`
   query BlogPostListing {
@@ -18,6 +16,17 @@ const LISTING_QUERY = graphql`
             slug
             cover_img
             thumbnail_img
+          }
+        }
+      }
+    }
+    allImageSharp {
+      edges {
+        node {
+          id
+          fluid(maxWidth: 1200) {
+            ...GatsbyImageSharpFluid_tracedSVG
+            originalName
           }
         }
       }
@@ -40,14 +49,20 @@ const Listing = () => (
     />
     <StaticQuery
       query={LISTING_QUERY}
-      render={({ allMarkdownRemark }) =>
+      render={({ allMarkdownRemark, allImageSharp }) =>
         allMarkdownRemark.edges.map(edge => (
           <article className="post" key={edge.node.frontmatter.slug}>
             <Link to={edge.node.frontmatter.slug}>
-              <img
-                src={edge.node.frontmatter.thumbnail_img}
-                alt="featured image"
-              />
+              {allImageSharp.edges.map(e =>
+                e.node.fluid.originalName ===
+                edge.node.frontmatter.cover_img ? (
+                  <Img
+                    fluid={e.node.fluid}
+                    alt="featured image"
+                    key={e.node.fluid.originalName}
+                  />
+                ) : null
+              )}
             </Link>
             <Link to={edge.node.frontmatter.slug}>
               <h2>{edge.node.frontmatter.title}</h2>
