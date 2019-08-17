@@ -15,7 +15,9 @@ export default class PostLayout extends Component {
       <Layout location={location}>
         <SEO
           title={markdownRemark.frontmatter.title}
-          image={this.props.data.file.childImageSharp.fluid.src}
+          image={`https://blog.riley.gg${
+            this.props.data.file.childImageSharp.fluid.src
+          }`}
           description={markdownRemark.excerpt}
         />
         <div className="single-post">
