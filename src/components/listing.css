@@ -26,8 +26,9 @@ img {
   margin: 0;
 }
 
-.posts img {
-  margin-bottom: 10px;
+.posts img,
+.posts .gatsby-image-wrapper {
+  margin-bottom: 18px;
   border-radius: 10px;
   min-height: 224px;
   object-fit: cover;
