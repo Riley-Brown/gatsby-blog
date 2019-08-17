@@ -3,6 +3,7 @@ import Layout from "./layout"
 import { graphql } from "gatsby"
 import "./postLayout.css"
 import Img from "gatsby-image"
+import SEO from "../components/seo"
 
 export default class PostLayout extends Component {
   render() {
@@ -12,6 +13,11 @@ export default class PostLayout extends Component {
 
     return (
       <Layout location={location}>
+        <SEO
+          title={markdownRemark.frontmatter.title}
+          image={this.props.data.file.childImageSharp.fluid.src}
+          description={markdownRemark.excerpt}
+        />
         <div className="single-post">
           <h1>{markdownRemark.frontmatter.title}</h1>
           <div className="post-info">
@@ -30,6 +36,7 @@ export const query = graphql`
   query PostQuery($cover_img: String!) {
     markdownRemark(frontmatter: { cover_img: { eq: $cover_img } }) {
       html
+      excerpt
       frontmatter {
         title
         date(formatString: "MMMM D, YYYY")
