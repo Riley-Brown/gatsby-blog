@@ -1,18 +1,14 @@
 .posts {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  width: 90%;
+  justify-content: space-between;
   margin: auto;
   max-width: 1140px;
 }
+
 .post {
-  /* flex: 33%; */
-  /* max-width: 350px; */
-  /* flex-grow: 1; */
   width: 31%;
   margin-bottom: 40px;
-  /* max-height: 500px; */
 }
 
 .posts h1,
@@ -30,8 +26,9 @@ img {
 .posts .gatsby-image-wrapper {
   margin-bottom: 18px;
   border-radius: 10px;
-  min-height: 224px;
+  height: 233px;
   object-fit: cover;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 1px 6px;
 }
 
 .posts h2 {
@@ -63,11 +60,22 @@ img {
     width: 45%;
     margin-bottom: 30px;
   }
+  .posts {
+    justify-content: space-around;
+  }
+  .posts img,
+  .posts .gatsby-image-wrapper {
+    height: 250px;
+  }
 }
 
 @media (max-width: 680px) {
   .post {
     width: 90%;
     margin-bottom: 30px;
+  }
+  .posts img,
+  .posts .gatsby-image-wrapper {
+    height: auto;
   }
 }
